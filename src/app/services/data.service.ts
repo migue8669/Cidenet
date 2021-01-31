@@ -15,7 +15,7 @@ export class DataService {
     this.baseUrl='https://node-c1ffb.firebaseio.com/';
   }
 
-  createRegister(register:RegisterModel){
+  createRegister(register:any){
     return this.http.post(`${this.baseUrl}registroEmpleado.json`,register).pipe(map((resp:any)=>{
       console.log(resp)
 register.key=resp.name;
