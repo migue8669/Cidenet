@@ -13,10 +13,10 @@ export class RegisterFormComponent implements OnInit {
 register: RegisterModel= new RegisterModel();
 registerForm!:string;
 formTemplate = new FormGroup({
-  firsLastName: new FormControl('', [Validators.required, Validators.pattern('^[A-ZA\u00E0-\u00FC]+(\s*[A-ZA\u00E0-\u00FC]*)*[A-ZA\u00E0-\u00FC]+$')]),
-  secondLastName: new FormControl(''),
-  firstName: new FormControl('', ),
-  otherNames: new FormControl('', ),
+  firsLastName: new FormControl('', [Validators.required, Validators.pattern('^[A-ZA\u00E0-\u00FC]+(\s*[A-ZA\u00E0-\u00FC]*)*[A-ZA\u00E0-\u00FC]+$'),Validators.maxLength(20)]),
+  secondLastName: new FormControl('',[Validators.required, Validators.pattern('^[A-ZA\u00E0-\u00FC]+(\s*[A-ZA\u00E0-\u00FC]*)*[A-ZA\u00E0-\u00FC]+$'),Validators.maxLength(20)]),
+  firstName: new FormControl('', [Validators.required, Validators.pattern('^[A-ZA\u00E0-\u00FC]+(\s*[A-ZA\u00E0-\u00FC]*)*[A-ZA\u00E0-\u00FC]+$'),Validators.maxLength(20)]),
+  otherNames: new FormControl('', [Validators.required, Validators.pattern('^[A-ZA\u00E0-\u00FC]+(\s*[A-ZA\u00E0-\u00FC]*)*[A-ZA\u00E0-\u00FC]+$'),Validators.maxLength(50)]),
   countryEmploye: new FormControl(''),
   typeId: new FormControl('', ),
   numberId: new FormControl(''),
