@@ -1,0 +1,59 @@
+<div class="container" style="width: 500px;">
+  <form (ngSubmit)="registerFunction(registerForm)"class="login100-form validate-form flex-sb flex-w" #registerForm="ngForm">
+  <div class="column">    <div class="form-group">
+      <label for="primerApellido">Primer apellido</label>
+
+      <input type="text" class="form-control" style="text-transform:uppercase;"[(ngModel)]="register.firstLastName"name="firsLastName" placeholder="Primer apellido">
+    </div>
+    <div class="form-group">
+      <label for="segundoApellido">Segundo apellido</label>
+      <input type="text" class="form-control" [(ngModel)]="register.SecondLastName" name="secondLastName" placeholder="Segundo apellido">
+    </div>
+    <div class="form-group">
+      <label for="primerNombre">Primer nombre</label>
+      <input type="text" class="form-control" [(ngModel)]="register.firstName" name="firstName" placeholder="Primer nombre">
+    </div>
+    <div class="form-group">
+      <label for="otrosNombre">Otros nombres</label>
+      <input type="text" class="form-control" [(ngModel)]="register.otherNames" name="otherNames" placeholder="Otros nombres">
+    </div>  <div class="form-group">
+      <label for="paisEmpleo">País del empleo </label>
+      <input type="text" class="form-control" [(ngModel)]="register.countryEmploye" name="countryEmploye" placeholder="País del empleo">
+    </div>
+    <div class="form-group">
+      <label for="tipoIdentificacion">Tipo de identificación</label>
+      <input type="text" class="form-control" [(ngModel)]="register.typeId" name="typeId" placeholder="Tipo de identificacion">
+    </div></div>
+    <div class="column">  
+    <div class="form-group">
+      <label for="numeroIdentificacion">Numero de identificación</label>
+      <input type="text" class="form-control" [(ngModel)]="register.numberId" name="numberId" placeholder="Numero de identificacin">
+    </div>
+    <div class="form-group">
+      <label for="correoElectronico">Correo Electronico</label>
+      <input type="text" class="form-control" [(ngModel)]="register.email" name="email"  placeholder="Correo Electronico">
+    </div>
+    <div class="form-group">
+      <label for="fechaIngreso">Fecha de ingreso</label>
+      <input type="text" class="form-control" [(ngModel)]="register.dateEntry" name="dateEntry"  placeholder="Fecha de ingreso">
+    </div>
+    <div class="form-group">
+      <label for="area">Area</label>
+      <input type="text" class="form-control" [(ngModel)]="register.area" name="area"  placeholder="Area">
+    </div>
+    <div class="form-group">
+      <label for="estado">Estado</label>
+      <input type="text" class="form-control" [(ngModel)]="register.state" name="state"  placeholder="Estado">
+    </div>
+    <div class="form-group">
+      <label for="fechaHora">Fecha y hora</label>
+      <input type="text" class="form-control" [(ngModel)]="register.dateTime" name="dateTime"  placeholder="Fecha y hora">
+    </div>
+  </div>
+
+    <br>
+    <div class="w-33">
+      <div class="center">
+     <button class="col-xs-6 col-centrada"    style="margin: 10px"    type="submit" class="btn btn-primary">Submit</button>
+    </div></div>
+    </form></div>
