@@ -18,11 +18,25 @@
       <input type="text" class="form-control" formControlName="otherNames" placeholder="Otros nombres">
     </div>  <div class="form-group">
       <label for="paisEmpleo">País del empleo </label>
-      <input type="text" class="form-control"  formControlName="countryEmploye" placeholder="País del empleo">
+      <select formControlName="countryEmploye" >
+        <option value="" disabled selected>Seleccione un País</option>
+
+        <option *ngFor="let state of countries" [ngValue]="state" >
+          {{ state }}
+        </option>
+      </select>
+      <!-- <input type="text" class="form-control"  formControlName="countryEmploye" placeholder="País del empleo"> -->
     </div>
     <div class="form-group">
       <label for="tipoIdentificacion">Tipo de identificación</label>
-      <input type="text" class="form-control"  formControlName="typeId" placeholder="Tipo de identificacion">
+      <select formControlName="typeId">
+        <option value="" disabled selected>Seleccione un tipo</option>
+
+        <option *ngFor="let type of typeIdList" [ngValue]="type">
+          {{ type }}
+        </option>
+      </select>
+      <!-- <input type="text" class="form-control"  formControlName="typeId" placeholder="Tipo de identificacion"> -->
     </div></div>
     <div class="column">  
     <div class="form-group">

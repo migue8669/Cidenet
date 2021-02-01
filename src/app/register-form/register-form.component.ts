@@ -19,7 +19,7 @@ formTemplate = new FormGroup({
   otherNames: new FormControl('', [Validators.required, Validators.pattern('^[A-ZA\u00E0-\u00FC]+(\s*[A-ZA\u00E0-\u00FC]*)*[A-ZA\u00E0-\u00FC]+$'),Validators.maxLength(50)]),
   countryEmploye: new FormControl(''),
   typeId: new FormControl('', ),
-  numberId: new FormControl(''),
+  numberId: new FormControl('',[Validators.required, Validators.pattern('^([a-zA-Z0-9]){1,16}$')]),
   email: new FormControl(''),
   dateEntry: new FormControl(''),
   area: new FormControl(''),
@@ -28,6 +28,8 @@ formTemplate = new FormGroup({
 
 })
   constructor(private registerService:DataService) { }
+countries=["Colombia","Estados Unidos"]
+typeIdList=["Cédula de Ciudadanía", "Cédula de Extranjería", "Pasaporte", "Permiso Especial"]
 
   ngOnInit(): void {
   }
@@ -42,8 +44,8 @@ this.registerService.createRegister(this.formTemplate.value).subscribe((response
   console.log(response)
 })
   }
-}
 
+}
 //    deleteDiacriticos(texto:any) {
 
 //     return texto.normalize('NFD').replace(/[\u0300-\u036f]/g,"");
